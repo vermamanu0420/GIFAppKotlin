@@ -12,8 +12,8 @@ class GifRepository @Inject constructor(private val gifApi: GifApi){
 
     private val _gifsData = MutableLiveData<List<GifData>>();
     // used live data to expose only ready only data
-    val gifsData: LiveData<List<GifData>>
-        get() = _gifsData
+   val gifsData: LiveData<List<GifData>>
+   get() = _gifsData
 
     suspend fun getGifs(query: String, offset: Int, limit: Int){
         val result = gifApi.getGifs(API_KEY, query,offset,limit)

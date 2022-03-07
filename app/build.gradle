@@ -8,7 +8,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.gifapp"
+        applicationId "com.example.gifappkotlin"
         minSdk 23
         targetSdk 31
         versionCode 1
@@ -31,11 +31,15 @@ android {
         jvmTarget = '1.8'
         freeCompilerArgs = ["-Xjvm-default=enable"]
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 def lifecycleExtensionVersion='1.1.1'
 def butterKnifeVersion='10.1.0'
-def retrofitVersion='2.3.0'
+def retrofitVersion='2.9.0'
 def glideVersion='4.9.0'
 def rxJavaVersion='2.1.1'
 def daggerVersion='2.41'
