@@ -26,5 +26,18 @@ This app uses MVVM architecture (Model View ViewModel) which is also recommended
 
 * **Room:** Room is one of the Jetpack Architecture Components in Android. This provides an abstract layer over the SQLite Database to save and perform the operations on persistent data locally.
 
-* **Coroutine:** 
+* **Coroutine:** Is light wight threads for asynchronous programming, Coroutines not only open the doors toasynchronous programming, but also provide a wealth of other possibilities such as concurrency, actors, etc.
+
+## What is Room?
+Room is one of the Jetpack Architecture Components in Android. This provides an abstract layer over the SQLite Database to save and perform the operations on persistent data locally. This is recommended by Google over SQLite Database although the SQLite APIs are more powerful they are fairly low-level, which requires a lot of time and effort to use. But Room makes everything easy and clear to create a Database and perform the operations on it.
+
+### Why use Room?
+Cache the relevant pieces of the data so that when the user’s device is offline, they can still browse and view the content offline.
+
+#### Primary Components of Room
+
+* **Database Class:** This provides the main access point to the underlying connection for the application’s persisted data. And this is annotated with @Database.
+* **Data Entities:** This Represents all the tables from the existing database. And annotated with @Entity.
+* **DAO (Data Access Objects):** This contains methods to perform the operations on the database. And annotated with @Dao.
+
 
