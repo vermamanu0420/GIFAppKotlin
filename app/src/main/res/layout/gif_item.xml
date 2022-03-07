@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="false"
+    android:layout_margin="2dp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:id="@+id/gifView"/>
+    <ImageButton
+        android:id="@+id/unFavourite"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="5dp"
+        android:elevation="5dp"
+        android:layout_gravity="right"
+        android:background="@drawable/ic_favorite_grey_24"/>
+
+    <ImageButton
+        android:id="@+id/delete"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="2dp"
+        android:layout_gravity="right"
+        android:background="@drawable/ic_close_24"/>
+    <ImageButton
+        android:id="@+id/favourite"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="5dp"
+        android:elevation="5dp"
+        android:layout_gravity="right"
+        android:background="@drawable/ic_favorite_red_24"/>
+</androidx.cardview.widget.CardView>
