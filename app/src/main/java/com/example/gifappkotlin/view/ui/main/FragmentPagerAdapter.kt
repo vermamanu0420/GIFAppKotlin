@@ -11,6 +11,10 @@ private val TAB_TITLES = arrayOf(
     R.string.tab_text_2
 )
 
+/**
+ * A [FragmentPagerAdapter] that returns a fragment corresponding to
+ * one of the sections/tabs/pages.
+ */
 class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     FragmentPagerAdapter(fm) {
 

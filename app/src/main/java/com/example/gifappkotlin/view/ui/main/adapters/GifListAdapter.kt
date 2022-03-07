@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gifappkotlin.database.FavouriteGif
 import com.example.gifappkotlin.databinding.GifItemBinding
 import com.example.gifappkotlin.model.GifData
 import com.example.gifappkotlin.utils.GlideUtil
@@ -44,6 +45,31 @@ class GifsListAdapter(
                 gifItem.images.downsized.url,
                 GlideUtil.getProgressDrawable(gifItemBinding.gifView.context)
             )
+
+            gifItemBinding.delete.visibility = View.GONE
+            if (gifItem.IsFavourite) {
+                gifItemBinding.unFavourite.visibility = View.GONE
+                gifItemBinding.favourite.visibility = View.VISIBLE
+            } else {
+                gifItemBinding.favourite.visibility = View.GONE
+                gifItemBinding.unFavourite.visibility = View.VISIBLE
+            }
+
+            if (gifItemBinding.favourite.visibility === View.VISIBLE) gifItemBinding.favourite.setOnClickListener { _ ->
+                listener.onFavClick(
+                    FavouriteGif(
+                        0,
+                        gifItem.id,
+                        gifItem.images.downsized.url
+                    )
+                )
+            }
+
+            if (gifItemBinding.unFavourite.visibility === View.VISIBLE) gifItemBinding.unFavourite.setOnClickListener { _ ->
+                listener.onUnFavClick(
+                    FavouriteGif(0, gifItem.id, gifItem.images.downsized.url)
+                )
+            }
         }
 
     }

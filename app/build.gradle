@@ -45,6 +45,7 @@ def rxJavaVersion='2.1.1'
 def daggerVersion='2.41'
 def coroutineVersion='1.6.0'
 def lifecycleVersion='2.5.0-alpha03'
+def roomVersion='2.4.2'
 
 dependencies {
 
@@ -77,6 +78,10 @@ dependencies {
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
+
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

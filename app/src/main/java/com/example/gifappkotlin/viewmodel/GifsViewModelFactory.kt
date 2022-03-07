@@ -4,8 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.gifappkotlin.repository.GifRepository
 import javax.inject.Inject
+import javax.inject.Singleton
 
-
+@Singleton
 class GifsViewModelFactory @Inject constructor(private val repository: GifRepository): ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

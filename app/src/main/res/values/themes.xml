@@ -19,9 +19,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.GIFAppkotlin.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.GIFApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.GIFAppkotlin.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.GIFApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="SearchBoxStyle">
         <item name="android:padding">10dp</item>
